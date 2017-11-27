@@ -66,8 +66,39 @@ public class DAOFactory {
 	    }
 
 	    
-	    public SiteDao getSiteDao() {
+	    public SiteDao getSiteDao()
+	    {
 	        return new SiteDaoImpl( this );
 	    }
-
-}
+	    
+	    public SecteurDao getSecteurDao () 
+	    {
+	    	return new SecteurDaoImpl (this);
+	    }
+	    
+	    public VoieDao getVoieDao()
+	    {
+	    	return new VoieDaoImpl (this);
+	    }
+	    
+	    public LongueurDao getLongueurDao()
+	    {
+	    	return new LongueurDaoImpl (this);
+	    }
+	    
+	    public TopoDao getTopoDao()
+	    {
+	    	return new TopoDaoImpl (this);
+	    }
+	    
+	    public CommentaireDao getCommentaireDao ()
+	    {
+	    	return new CommentaireDaoImpl (this);
+	    }
+	    
+	    public PretDao getPretDao ()
+	    {
+	    	return new PretDaoImpl (this);
+	    }
+	    
+	    }
