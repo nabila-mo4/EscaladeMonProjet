@@ -4,7 +4,14 @@ public class Secteur {
 	private String nom;
 	private int hauteur;
 	private Long id;
+	private Site site;
 	
+	public Site getSite() {
+		return site;
+	}
+	public void setSite(Site site) {
+		this.site = site;
+	}
 	public Long getId() {
 		return id;
 	}
