@@ -1,13 +1,22 @@
 package com.escalade.beans;
 
 public class Voie {
-
+	
+		private Secteur secteur;
 		private String nom;
 		private int hauteur;
 		private String nomHauteurVoie;
 		private int nbPoints;
 		private String etat;
 		private Long id;
+		
+		
+		public Secteur getSecteur() {
+			return secteur;
+		}
+		public void setSecteur(Secteur secteur) {
+			this.secteur = secteur;
+		}
 		public Long getId() {
 			return id;
 		}
