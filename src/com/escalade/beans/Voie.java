@@ -1,6 +1,8 @@
 package com.escalade.beans;
 
-public class Voie {
+import java.io.Serializable;
+
+public class Voie implements Serializable{
 	
 		private Secteur secteur;
 		private String nom;

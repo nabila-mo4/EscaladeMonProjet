@@ -1,6 +1,8 @@
 package com.escalade.beans;
 
-public class Secteur {
+import java.io.Serializable;
+
+public class Secteur implements Serializable {
 	private String nom;
 	private int hauteur;
 	private Long id;

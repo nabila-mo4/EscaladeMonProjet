@@ -1,8 +1,9 @@
 package com.escalade.beans;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Topo {
+public class Topo implements Serializable {
 	
 		private String nom;
 		private String nomAuteur;

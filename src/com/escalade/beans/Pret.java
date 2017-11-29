@@ -1,8 +1,9 @@
 package com.escalade.beans;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Pret {
+public class Pret implements Serializable {
 	
 		private Topo topo;
 		private Date dateDebut;

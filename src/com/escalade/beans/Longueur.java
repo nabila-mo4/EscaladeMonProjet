@@ -1,6 +1,8 @@
 package com.escalade.beans;
 
-public class Longueur {
+import java.io.Serializable;
+
+public class Longueur implements Serializable {
 		private Voie voie;
 		public Voie getVoie() {
 			return voie;

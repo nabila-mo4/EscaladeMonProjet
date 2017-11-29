@@ -1,8 +1,9 @@
 package com.escalade.beans;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Commentaire {
+public class Commentaire implements Serializable {
 		private Long id;
 		private String contenu;
 		private String nomUtilisateur;
