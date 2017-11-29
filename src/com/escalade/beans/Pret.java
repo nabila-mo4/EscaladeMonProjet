@@ -9,6 +9,20 @@ public class Pret {
 		private Date dateFin;
 		private String nomEmprunteur;
 		private String emailEmprunteur;
+		private String nomDemandeur;
+		private String emailDemandeur;
+		public String getNomDemandeur() {
+			return nomDemandeur;
+		}
+		public void setNomDemandeur(String nomDemandeur) {
+			this.nomDemandeur = nomDemandeur;
+		}
+		public String getEmailDemandeur() {
+			return emailDemandeur;
+		}
+		public void setEmailDemandeur(String emailDemandeur) {
+			this.emailDemandeur = emailDemandeur;
+		}
 		private Long id;
 		
 		public Long getId() {
