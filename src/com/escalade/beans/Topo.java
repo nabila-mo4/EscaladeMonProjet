@@ -1,13 +1,13 @@
 package com.escalade.beans;
 
 import java.io.Serializable;
-import java.util.Date;
+
 
 public class Topo implements Serializable {
 	
 		private String nom;
 		private String nomAuteur;
-		private Date dateSortie;
+		private String dateSortie;
 		private Long id;
 		
 		public Long getId() {
@@ -28,10 +28,10 @@ public class Topo implements Serializable {
 		public void setNomAuteur(String nomAuteur) {
 			this.nomAuteur = nomAuteur;
 		}
-		public Date getDateSortie() {
+		public String getDateSortie() {
 			return dateSortie;
 		}
-		public void setDateSortie(Date dateSortie) {
+		public void setDateSortie(String dateSortie) {
 			this.dateSortie = dateSortie;
 		} 
 		
