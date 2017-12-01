@@ -24,9 +24,7 @@ import com.escalade.dao.DAOFactory;
 	    public static final String SESSION_SITES= "sites";
 	    public static final String SESSION_SECTEURS= "secteurs";
 	    public static final String APPLICATION_SITES = "initClients";
-	    public static final String SESSION_COMMANDES     = "commandes";
-	    public static final String APPLICATION_COMMANDES = "initCommandes";
-
+	   
 	    public static final String VUE_SUCCES= "/WEB-INF/afficherSecteur.jsp";
 	    public static final String VUE_FORM = "/WEB-INF/creerSecteur.jsp";
 
