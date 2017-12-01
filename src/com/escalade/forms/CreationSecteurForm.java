@@ -19,6 +19,11 @@ import com.escalade.dao.DAOException;
 	    private Map<String, String> erreurs= new HashMap<String, String>();
 	    private SiteDao  siteDao;
 	    private SecteurDao secteurDao;
+	    
+	    public CreationSecteurForm(SecteurDao secteurDao)
+	    {
+	    	this.secteurDao = secteurDao;
+	    }
 
 	    public CreationSecteurForm( SiteDao siteDao, SecteurDao secteurDao ) {
 	        this.siteDao = siteDao;
@@ -61,7 +66,7 @@ import com.escalade.dao.DAOException;
 	            }
 	        } catch ( DAOException e ) {
 	            setErreur( "imprévu", "Erreur imprévue lors de la création." );
-	            resultat = "Échec de la création de la commande : une erreur imprévue est survenue, merci de réessayer dans quelques instants.";
+	            resultat = "Échec de la création du secteur : une erreur imprévue est survenue, merci de réessayer dans quelques instants.";
 	            e.printStackTrace();
 	        }
 
