@@ -23,6 +23,11 @@ public class CreationVoieForm {
 	    private Map<String, String> erreurs= new HashMap<String, String>();
 	    private VoieDao voieDao;
 	    private SecteurDao secteurDao;
+	    
+	    public CreationVoieForm(VoieDao voieDao)
+	    {
+	    	this.voieDao= voieDao;
+	    }
 
 	    public CreationVoieForm( SecteurDao secteurDao, VoieDao voieDao ) {
 	        this.secteurDao = secteurDao;
