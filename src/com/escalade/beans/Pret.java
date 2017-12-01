@@ -6,8 +6,8 @@ import java.util.Date;
 public class Pret implements Serializable {
 	
 		private Topo topo;
-		private Date dateDebut;
-		private Date dateFin;
+		private String dateDebut;
+		private String dateFin;
 		private String nomEmprunteur;
 		private String emailEmprunteur;
 		private String nomDemandeur;
@@ -32,16 +32,16 @@ public class Pret implements Serializable {
 		public void setId(Long id) {
 			this.id = id;
 		}
-		public Date getDateDebut() {
+		public String getDateDebut() {
 			return dateDebut;
 		}
-		public void setDateDebut(Date dateDebut) {
+		public void setDateDebut(String dateDebut) {
 			this.dateDebut = dateDebut;
 		}
-		public Date getDateFin() {
+		public String getDateFin() {
 			return dateFin;
 		}
-		public void setDateFin(Date dateFin) {
+		public void setDateFin(String dateFin) {
 			this.dateFin = dateFin;
 		}
 		public String getNomEmprunteur() {

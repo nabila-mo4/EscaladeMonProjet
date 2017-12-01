@@ -6,7 +6,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import com.escalade.beans.Topo;
 import com.escalade.dao.DAOException;
-import com.escalade.dao.SiteDao;
 import com.escalade.dao.TopoDao;
 
 
@@ -20,7 +19,7 @@ import com.escalade.dao.TopoDao;
 	    private Map<String, String> erreurs = new HashMap<String, String>();
 	    private TopoDao topoDao;
 
-	    public CreationTopoForm( SiteDao siteDao ) {
+	    public CreationTopoForm( TopoDao topoDao ) {
 	        this.topoDao = topoDao;
 	    }
 
