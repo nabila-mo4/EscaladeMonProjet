@@ -1,15 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
- 	<servlet>
+
+
+
+<filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>PrechargementFilter</filter-name>
+        <filter-class>com.escalade.filters.PrechargementFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PrechargementFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <listener>
+	<listener-class>com.escalade.config.InitialisationDaoFactory</listener-class>
+    </listener>
+    
+	<servlet>
 		<servlet-name>CreationSite</servlet-name>
-		<servlet-class>com.sdzee.servlets.CreationSite</servlet-class>
+		<servlet-class>com.escalade.servlets.CreationSite</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeSites</servlet-name>
+		<servlet-class>com.escalade.servlets.ListeSites</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionSite</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionSite</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreationSecteur</servlet-name>
+		<servlet-class>com.escalade.servlets.CreationSecteur</servlet-class>
+		
+	</servlet>
+	<servlet>
+		<servlet-name>ListeSecteurs</servlet-name>
+		<servlet-class>com.escalade.servlets.ListeSecteurs</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionSecteur</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionSecteur</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>CreationVoie</servlet-name>
+		<servlet-class>com.escalade.servlets.CreationVoie</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeVoies</servlet-name>
+		<servlet-class>com.escalade.servlets.ListeVoies</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionVoie</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionVoie</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CreationLongueur</servlet-name>
+		<servlet-class>com.escalade.servlets.CreationLongueur</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeLongueurs</servlet-name>
+		<servlet-class>com.escalade.servlets.ListeLongueur</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionLongueur</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionLongueur</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CreationTopo</servlet-name>
+		<servlet-class>com.escalade.servlets.CreationTopo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeTopos</servlet-name>
+		<servlet-class>com.escalade.servlets.ListeTopos</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionTopo</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionTopo</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CreationCommentaire</servlet-name>
+		<servlet-class>com.escalade.servlets.CreationCommentaire</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeCommentaires</servlet-name>
+		<servlet-class>com.escalade.servlets.ListeCommentaires</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionCommentaire</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionCommentaire</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CreationPret</servlet-name>
+		<servlet-class>com.escalade.servlets.CreationPret</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListePrets</servlet-name>
+		<servlet-class>com.escalade.servlets.ListePrets</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionPret</servlet-name>
+		<servlet-class>com.escalade.servlets.SuppressionPret</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>CreationSite</servlet-name>
 		<url-pattern>/creationSite</url-pattern>
 	</servlet-mapping>
-<listener>
-    <listener-class>com.escalade.config.InitialisationDaoFactory</listener-class>
-</listener>
+	<servlet-mapping>
+		<servlet-name>ListeSites</servlet-name>
+		<url-pattern>/listeSites</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionSite</servlet-name>
+		<url-pattern>/suppressionSite</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationSecteur</servlet-name>
+		<url-pattern>/creationSecteur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeSecteurs</servlet-name>
+		<url-pattern>/listeSecteurs</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionSecteur</servlet-name>
+		<url-pattern>/suppressionSecteur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationVoie</servlet-name>
+		<url-pattern>/creationVoie</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeVoies</servlet-name>
+		<url-pattern>/listeVoies</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionVoie</servlet-name>
+		<url-pattern>/suppressionVoie</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationLongueur</servlet-name>
+		<url-pattern>/creationLongueur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeLongueurs</servlet-name>
+		<url-pattern>/listeLongueurs</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionLongueur</servlet-name>
+		<url-pattern>/suppressionLongueur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationTopo</servlet-name>
+		<url-pattern>/creationTopo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeTopos</servlet-name>
+		<url-pattern>/listeTopos</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionTopo</servlet-name>
+		<url-pattern>/suppressionTopo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationPret</servlet-name>
+		<url-pattern>/creationPret</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListePrets</servlet-name>
+		<url-pattern>/listePrets</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionPret</servlet-name>
+		<url-pattern>/suppressionPret</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationCommentaire</servlet-name>
+		<url-pattern>/creationCommentaire</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeCommentaires</servlet-name>
+		<url-pattern>/listeCommentaires</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionCommentaire</servlet-name>
+		<url-pattern>/suppressionCommentaire</url-pattern>
+	</servlet-mapping>
 </web-app>
