@@ -17,8 +17,8 @@
         <div id="corps">
         <c:choose>
         
-        <c:when test="${ empty sessionScope.clients }">
-         <p class="erreur">Aucun client enregistré.</p>
+        <c:when test="${ empty sessionScope.sites }">
+         <p class="erreur">Aucun site enregistré.</p>
         
         </c:when>
         
@@ -27,11 +27,10 @@
         <table>
                 <tr>
                     <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Adresse</th>
-                    <th>Téléphone</th>
-                    <th>Email</th>
-                    <th>Image</th>
+                    <th>Emplacement géographique</th>
+                    <th>Type</th>
+                    <th>Hauteur</th>
+                    
                     <th class="action">Action</th>                    
                 </tr>
         <c:forEach items="${ sessionScope.sites }" var="mapSites" varStatus="boucle">
