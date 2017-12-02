@@ -30,6 +30,24 @@ import com.escalade.dao.VoieDao;
 	    private VoieDao voieDao;
 	    private LongueurDao longueurDao;
 	    private TopoDao topoDao;
+		private CommentaireDao commentaireDao;
+		
+		public CreationCommentaireForm(SiteDao siteDao, CommentaireDao commentaireDao)
+		{
+			this.siteDao=siteDao;
+			this.commentaireDao=commentaireDao;
+		}
+	    
+	    public CreationCommentaireForm (SiteDao siteDao, SecteurDao secteurDao, VoieDao voieDao, LongueurDao
+	    		longueurDao, TopoDao topoDao, CommentaireDao commentaireDao)
+	    {
+	    	this.siteDao= siteDao;
+	    	this.secteurDao=secteurDao;
+	    	this.voieDao= voieDao;
+	    	this.longueurDao= longueurDao;
+	    	this.topoDao = topoDao;
+	    	this.commentaireDao= commentaireDao;
+	    }
 	   
 
 	    
@@ -41,7 +59,7 @@ import com.escalade.dao.VoieDao;
 	        return resultat;
 	    }
 
-	    public Secteur createSecteur( HttpServletRequest request) {
+	    public Commentaire createCommentaire( HttpServletRequest request) {
 	  
 	        DateTime date= new DateTime();
 	        CreationSiteForm siteForm = new CreationSiteForm( siteDao );
