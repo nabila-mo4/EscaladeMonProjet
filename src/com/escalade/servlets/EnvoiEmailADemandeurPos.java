@@ -40,7 +40,7 @@ public class EnvoiEmailADemandeurPos extends HttpServlet{
 	         String dateFin = (String) session.getAttribute( SESSION_DATEFIN);
 	         
 			String objet = "Réponse à votre demande";
-			String contenu = "Votre demande d'empreint est acceptée, l'emprunt est valable entre les dates"
+			String contenu = "Votre demande d'emprunt est acceptée, l'emprunt est valable entre les dates"
 					+dateDebut+"et"+dateFin;
 						 
 			String message ="";
