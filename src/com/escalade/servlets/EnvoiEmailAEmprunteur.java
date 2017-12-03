@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.escalade.beans.Site;
+
 import com.escalade.dao.DAOFactory;
 import com.escalade.dao.PretDao;
 
