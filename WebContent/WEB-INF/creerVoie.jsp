@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Création du secteur</title>
+	<title>Création de la voie</title>
 	<link type="text/css" rel="stylesheet" href="<c:url value="/style/bootstrap.css"></c:url>" />
 	<link type="text/css" rel="stylesheet" href="<c:url value="/style/style.css"></c:url>" />
 	
@@ -18,7 +18,7 @@
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="col-md-12">
-							<h3> AJOUTER UN NOUVEAU SECTEUR </h3>
+							<h3> AJOUTER UNE NOUVELLE VOIE </h3>
 						</div>
 						<hr>
 					</div>
@@ -26,16 +26,23 @@
 						<div class="row">
 							<div class="col-lg-12">
      	
-					     		<form method="post" action="<c:url value="/creationSecteur"/>"
+					     		<form method="post" action="<c:url value="/creationVoie"/>"
 					     		enctype="multipart/form-data"
 					            role="form" style="display: block;">
 					       			<div class="form-group">
-					       				<input type="text" name="nomSecteur" id="nomSecteur" value="<c:out value="${secteur.nom}"></c:out>" tabindex="1" class="form-control" placeholder="Nom du secteur" />
+					       				<input type="text" name="nomVoie" id="nomVoie" value="<c:out value="${voie.nom}"></c:out>" tabindex="1" class="form-control" placeholder="Nom de la voie" />
 					       			</div>
 									
+									<div class="form-group">	
+										<input type="text" name="nomHauteurVoie" id="nomHauteurVoie" value="<c:out value="${voie.nomHauteur}"></c:out>" tabindex="1" class="form-control" placeholder="Nom de la hauteur de la voie" />
+					       			</div>
 									
+									<div class="form-group">
+										<input type="text" name="nbPointsVoie" id="nbPointsVoie" value="<c:out value="${voie.nbPoints}"></c:out>" tabindex="1" class="form-control" placeholder="Nombre de points de la vue" />
+					       			</div>
+					       			
 					       			<div class="form-group">
-					       				<input type="text" name="hauteurSecteur" id="hauteurSecteur" value="<c:out value="${secteur.hauteur}"></c:out>" tabindex="1" class="form-control" placeholder="Hauteur du secteur" />
+					       				<input type="text" name="hauteurVoie" id="hauteurVoie" value="<c:out value="${voie.hauteur}"></c:out>" tabindex="1" class="form-control" placeholder="Hauteur de la voie" />
 					       			</div>
 					       			
 					       			<p class="info">${ form.resultat }</p>
